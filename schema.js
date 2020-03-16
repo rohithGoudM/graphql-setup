@@ -1,35 +1,30 @@
-const { makeExecutableSchema } = require('graphql-tools');
+const {
+	makeExecutableSchema,
+	addSchemaLevelResolveFunction
+} = require('graphql-tools');
 const { merge } = require('lodash');
 
 //types
 const User = require('./types/User');
-const UserRating = require('./types/UserRating');
-
 //queries
 const userQueries = require('./queries/user');
-
 //mutations
 
-//subscriptions
-
 const Root = `
-	type Query {
+	type Query{
 		dummy: String
 	}
-
-	type Mutation {
+	type Mutation{
 		dummy: String
 	}
-
-	type Subscription {
+	type Subscription{
 		dummy: String
 	}
-
-	schema {
-	    query: Query
-	    mutation: Mutation
-	    subscription: Subscription
-  	}
+	schema{
+		query: Query
+		mutation: Mutation
+		subscription: Subscription
+	}
 `;
 
 const resolvers = merge(
@@ -44,9 +39,8 @@ const schema = makeExecutableSchema({
 	typeDefs: [
 		Root,
 		User,
-		UserRating
 	],
-	resolvers
-});
+	resolvers,
+})
 
 module.exports = schema;

@@ -1,5 +1,5 @@
 # graphql-setup
-The Basic GraphQL Setup for a MongoDB project
+The Basic GraphQL Setup for a MongoDB project with Passport_JS
 
 Git Clone/Download Zip
 

@@ -1,14 +1,16 @@
-const User = `
-	type User {
+const User=`
+	type User{
 		id: ID!
-		username: String #lowercaseString
-		authId: ID
-		name: String
-		userRatings: [UserRating]
+		email: String!
+		name: String!
+		username: String!
+		createdAt: String
+		googleProviderId: String!
 	}
+
 	extend type Query {
-		userById: User
-		usersByUsername: [User]
+		userById(userId: ID!): User
+		usersByUsername(username: String!): [User]
 	}
 `;
 

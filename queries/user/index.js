@@ -8,6 +8,7 @@ module.exports = {
 		userById,
 		usersByUsername
 	},
+	//resolvers
 	User: {
 		userRatings
 	}
