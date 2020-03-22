@@ -7,4 +7,4 @@ $npm install
 
 Inspired from Spectrum Chat GitRepo.
 
-Thank You NetNinja.
+Thank You NetNinja.nnj
